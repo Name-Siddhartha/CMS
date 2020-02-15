@@ -1,0 +1,307 @@
+.body {
+  font-family: 'Varela Round', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.br {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.brmedium {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.brlarge {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* left: calc((100% - 1280px)/2); */
+  width: 100%;
+  height: 25px;
+  font-size: 12px;
+  background-color: #333333;
+  z-index: 30;
+  /* margin-left: -8px; */
+}
+
+.topbar button {
+  line-height: 25px;
+  vertical-align: middle;
+  width: calc(1280px / 8);
+  /* width: calc(1000px/7); I dunno why this is not working. */
+  font-family: 'Varela Round', sans-serif;
+  /* margin-left :10px; */
+  color: #cccccc;
+  /* text-decoration: none; */
+  background-color: transparent;
+  outline: none;
+  border: none;
+  /* border-right: 1px solid white; */
+}
+
+.topbar button:first-of-type {
+  margin-left: calc((100% - 1280px)/2);
+  /* border-left: 1px solid white; */
+}
+
+.topbar button:hover {
+  color: white;
+  /* transform: translate(1px, 1px); I dunno why this is not working. */
+}
+
+.header {
+  position: fixed;
+  background-color: white;
+  top: 25px;
+  left: 0;
+  /* left: calc((100% - 1280px)/2); */
+  width: 100%;
+  height: 110px;
+  z-index: 29;
+}
+
+.header .text {
+  position: fixed;
+  color: #1565c0;
+  font-family: 'Open Sans', sans-serif;
+  padding: none;
+  background-color: transparent;
+  font-size: 24px;
+  top: 50%;
+  /* This is done to re-postion the object */
+}
+
+.header .text .left {
+  position: fixed;
+  top: 75px;
+  /* left: 100px; */
+  z-index: 1;
+  left: calc((100% - 1000px)/2);
+  transform: translate(0, -50%);
+}
+
+.header .text .right {
+  position: fixed;
+  top: 75px;
+  z-index: 2;
+  /* left: 500px; */
+  right: calc((100% - 1000px)/2);
+  transform: translate(0, -50%);
+}
+
+.header img {
+  width: 100px;
+  height: 100px;
+  /* margin: 5px; */
+  border-radius: 2px;
+  border: none;
+  margin: 5px 0 0 calc((100% - 1280px)/2);
+}
+
+.navbar {
+  position: fixed;
+  top: 135px;
+  left: 0;
+  /* left: calc((100% - 1280px)/2); */
+  width: 100%;
+  height: 30px;
+  color: white;
+  background-color: #1976d2;
+  text-decoration: none;
+  z-index: 28;
+}
+
+.navbar button {
+  /* text-decoration: none; */
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-right: 1px solid white;
+  line-height: 30px;
+  vertical-align: middle;
+  outline: none;
+  /* padding-left: 50px; */
+  text-align: center;
+  width: calc((1280px - 7px)/7);
+  /* margin-left: 10px; */
+  font-family: 'Varela Round', sans-serif;
+}
+
+.navbar button:first-of-type {
+  margin-left: calc((100% - 1280px)/2);
+  border-left: 1px solid white;
+}
+
+.navbar .dropdown ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.navbar .dropdown ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .dropdown ul li a:hover {
+  color: white;
+}
+
+.navbar .dropdown ul li a:visited {
+  color: green;
+}
+
+.material-table {
+  position: absolute;
+  top: 300px;
+  width: 600px;
+  left: calc((100% - 600px)/2);
+  border-collapse: collapse;
+  /*This is very important to understand.*/
+  border-spacing: 0;
+  /*We can add these 2 properties only to the element id. Not even the table directly*/
+  background-color: #f8f8f8;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+}
+
+/* .material-table table {
+  background-color: #eeeeee;    I dunno why but this is not working at all.
+  color: #444444;
+  border: 1px solid #444444;
+  font-family: 'Varela Round', sans-serif;
+} */
+
+.material-table td {
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  font-family: 'Varela Round', sans-serif;
+  height: 32px;
+  text-overflow: ellipsis;
+  padding: 0 16px;
+}
+
+.material-table thead {
+  font-size: 14px;
+}
+
+.material-table th {
+  height: 36px;
+  text-align: left;
+  padding: 0 16px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.material-table tbody tr {
+  font-size: 16px;
+}
+
+.material-table tbody tr:hover {
+  background-color: #e5e5e5;
+}
+
+.material-table tfoot td {
+  height: 28px;
+  font-size: 14px;
+}
+
+/* .material-table th:first-of-type {
+  border-top-left-radius: 5px;
+  border-left: 1px solid #444444;
+}
+
+.material-table th:last-of-type {
+  border-top-right-radius: 5px;
+  border-right: 1px solid #444444;
+}
+
+.material-table tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 5px;
+}
+
+.material-table tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 5px;
+} */
+
+.sidenav {
+  position: fixed;
+  top: 166px;
+  height: calc(100% - 200px);
+  left: calc((100% - 1280px)/2);
+  width: calc(1280px / 7);
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.container {
+  position: fixed;
+  top: 175px;
+  left: calc(((100% - 1280px)/2) + (1280px / 7) + 25px);
+}
+
+input[type=email],
+input[type=password],
+input[type=text],
+select {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #ffffff;
+  border: 2px solid #d6d6d6;
+  border-radius: 4px;
+}
+
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+select:focus {
+  background-color: #f5f5f5;
+  outline: none;
+  text-overflow: clip;
+  border-radius: 4px;
+  border: 2px solid #1e88e5;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  border-top: 4px solid #0d47a1;
+  width: 100%;
+  /* margin-left: -8px; */
+  height: 30px;
+  background-color: #333333;
+}
+
+
+.footer a {
+  color: white;
+  margin-left: 10px;
+  line-height: 30px;
+  text-decoration: none;
+  vertical-align: middle;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.footer a:first-of-type {
+  margin-left: calc((100% - 1280px)/2);
+}
+
+.footer p {
+  color: white;
+}

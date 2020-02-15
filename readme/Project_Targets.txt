@@ -1,0 +1,27 @@
+Make generic classes for the webpage
+
+Major parts of the webpage are the following:
+
+1. Header
+	Here we have the logo icon, name and other relevant features that might 
+	seem necessary. 	
+
+2. Top Navbar
+	a. There have to be a set of predefined links
+		i. We will be interacting with the list of entries in the database
+		ii. We would have to deal with many data tables
+			(or even 1 if we plan it well)
+	b. Then we will have the dropdown list to deal with.
+		i. Again, we have to define the model.
+		ii. This will be relatively easier to do.
+
+3. Left Navbar
+	a. We have the quick links
+		i. We can go for the redirection of pages (load afresh)
+		ii. We can go for hiding the elements and then display them	
+		iii. We can chose to go for the iframe model
+
+4. Right Navbar 
+	a. If it even exists
+		i. Then add the suitable external links
+		ii. We should ultimately be aslo able to add a new webpage
