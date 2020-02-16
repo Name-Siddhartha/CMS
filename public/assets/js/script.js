@@ -18,6 +18,7 @@ function scrollFunction() {
         document.getElementById("homepage-header").style.height = "80px";
         // document.getElementById("homepage-header").style.backgroundColor = "rgba(67, 160, 71, 1)";
         document.getElementById("homepage-header").style.backgroundColor = "#1565c0";
+        document.getElementById("homepage-header").style.borderBottomColor = "transparent";
         document.getElementById("homepage-logo").style.width = "70px";
         document.getElementById("homepage-logo").style.height = "70px";
         document.getElementById("header-text-left").style.color = "white";
@@ -28,6 +29,7 @@ function scrollFunction() {
         document.getElementById("homepage-navbar").style.top = (135 - 4 * shift) + "px";
         // document.getElementById("homepage-header").style.backgroundColor = "rgba(67, 160, 71," + (0.8 + val / 400) + ")";
         document.getElementById("homepage-header").style.backgroundColor = "white";
+        document.getElementById("homepage-header").style.borderBottomColor = "#1e88e5";
         document.getElementById("homepage-logo").style.width = (100 - shift) + "px";
         document.getElementById("homepage-logo").style.height = (100 - shift) + "px";
         document.getElementById("header-text-left").style.color = "#1565c0";
