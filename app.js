@@ -1,18 +1,32 @@
 var express = require("express"),
   mongoose = require("mongoose"),
+  bodyParser = require("body-parser"),
   elements = require("./models/elements");
 
 var app = express();
 path = require("path");
 app.use("/public", express.static("public"));
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://localhost/cms", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+});
 
-// app.use(
-//   require("express-session")({
-//     secret: "dis work distro",
-//     resave: false,
-//     saveUninitialized: false
-//   })
-// );
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
+
+app.use(
+  require("express-session")({
+    secret: "dis work distro",
+    resave: false,
+    saveUninitialized: false
+  })
+);
 
 app.set("view engine", "ejs");
 
@@ -24,8 +38,8 @@ app.get("/CMS", function (req, res) {
   res.render("cmsportal");
 });
 
-// app.post("/CMS", function(req, res) {
-//   var new_element = new elements({
+// app.post("/CMS", function (req, res) {
+//   var new__element = new elements({
 //     page: "homepage", //doc data
 //     element_text: "Welcome to ABC Technological University Website",
 //     tag_type: "p",
@@ -33,11 +47,11 @@ app.get("/CMS", function (req, res) {
 //     div_id: "homepage-welcome",
 //     document_name: "How to use ShareDocs? An Introduction"
 //   });
-//   new__document.save(function(err) {
-//     var new_element = new elements({
-//       docnp_id: new__document._id,
-//       user_id: req.body.username,
-//       document_name: new__document.document_name
+//   new__element.save(function (err) {
+//     var new__element = new elements({
+//       div_id: new__element._id,
+//       // user_id: req.body.username,
+//       tag_type: new__element.document_name
 //       // date:Date.now,
 //     });
 //   });

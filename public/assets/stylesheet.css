@@ -246,6 +246,50 @@ button:hover {
   border-radius: 4px;
 }
 
+.sidenav-headings {
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 400;
+  padding: 5px;
+  padding-left: 13px;
+  font-size: 16px;
+  height: 24px;
+  line-height: 24px;
+  vertical-align: middle;
+  justify-content: left;
+  text-align: left;
+  cursor: pointer;
+  /* color: white; */
+  color: #444444;
+  /* border: 2px solid #1565c0; */
+  border: 2px solid white;
+  margin-bottom: 2px;
+  /* background-color: green; */
+  /* border: 10px solid white; */
+  /* border-radius: 15px; */
+}
+
+.sidenav-headings img {
+  position: relative;
+  left: 0;
+  top: 4px;
+}
+
+.sidenav-headings:hover {
+  font-size: 20px;
+  margin-right: 5px;
+  background-color: #e6e6e6;
+  border: 2px solid #e6e6e6;
+  border-left: 0px solid transparent;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+  padding-left: 23px;
+  border-radius: 0 25px 25px 0;
+}
+
+.sidenav-headings:active {
+  color: #444444;
+  transform: translate(0px, 1px);
+}
+
 .container {
   position: fixed;
   top: 175px;
@@ -274,6 +318,23 @@ select:focus {
   text-overflow: clip;
   border-radius: 4px;
   border: 2px solid #1e88e5;
+}
+
+select option {
+  color: #1e88e5;
+  background-color: #e5e5e5;
+  border: 2px solid #1e88e5;
+  border-radius: 2px;
+  height: 25px;
+}
+
+select option:hover {
+  border: 2px solid #1e88e5;
+  border-radius: 2px;
+}
+
+select option:active {
+  background-color: pink;
 }
 
 .footer {
